@@ -13,18 +13,12 @@
   </form>
   <script>
       $(function() {
-        $('#nom').focus(function() { //si nom a le focus
-          $('#nom').css('border', '1px solid green'); //la bordure de l'input devient vert
-        })
-        $('#nom').blur(function() { //sinon
-          $('#nom').css('border', '1px solid red'); //la bordure de l'input devient rouge
-        })
-        $('#prenom').focus(function() { //si prenom a le focus
-          $('#prenom').css('border', '1px solid green'); //la bordure de l'input devient vert
-        })
-        $('#prenom').blur(function() { //sinon
-          $('#prenom').css('border', '1px solid red'); //la bordure de l'input devient rouge
-        })
+          $('#nom, #prenom').focus(function() { //si nom et pre a le focus
+            $(this).css('border', '3px solid green'); //la bordure de celui-ci devient vert
+          })
+          $('#nom, #prenom').blur(function() { //sinon
+            $(this).css('border', '3px solid red'); //la bordure de celui-ci devient rouge
+          });
       });
   </script>
 </body>
